@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{%block titulo%}listar doctores{% endblock %}
+
+{%block contenido%} 
+<div class="card">
+    <div class="card-header">
+        <a name=""id=""class="btn btn-success"href="{% url 'crear' %}"role="button">Agregar Nuevo Dentista</a> 
+    </div>
+    <div class="card-body">
+        <h4 class="card-title">Doctores</h4>
+        <div class="table-responsive">
+            <table class="table table-primary">
+                <thead>
+                    <tr>
+                        <th>Id Doctor</th>
+                        <th>Nombre</th>
+                        <th>Especialidad</th>
+                        <th>Telefono</th>
+                        <th>Correo</th>
+                        <th>Fecha de registro</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="">
+                        <td>001</td>
+                        <td>Juan Carlos Kantuta</td>
+                        <td>Dentista</td>
+                        <td>76556081</td>
+                        <td>juan.kantuta@gmail.com</td>
+                        <td>04/11/2024</td>
+                        <td>
+                            <a name="" id="" class="btn btn-info" href="{% url 'editar' %}" role="button">Editar</a>
+                        |
+                        <a name="" id="" class="btn btn-danger" href="#" role="button">Borrar</a>
+                    </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+    </div>
+    <div class="card-footer text-muted"></div>
+</div>
+
+{% endblock %}
